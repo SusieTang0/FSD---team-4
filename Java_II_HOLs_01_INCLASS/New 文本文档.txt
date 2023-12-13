@@ -1,0 +1,12 @@
+PartTimeEmployee
+name. pay rate, number og hours worked
+
+person
+
+
+Clock ExtClock
+
+shape
+
+square, retangle, circle
+
