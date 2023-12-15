@@ -1,7 +1,8 @@
 Medical Center (logo)
 
 Person
-+Name : String 
++firstName : String 
++lastName: String
 + DateOfBirth: Date
 
 User:((?)
@@ -25,18 +26,20 @@ o	Method:
 	getSepcialty
 	getRate
 	getDoctor(Sting,Date,Date,String,Int)
+
 •	PatientPerson(extend to Person)
 o	medicardNumber:String
 o	issuranceCompeny:Sting
-o	appliantID?:String
+o	contractNumber:String
 o	Method:
 	setMedicarNumber
 	setIssuranceCompeny
-	setID
+	setContractNumber
 	setPatient(Sring,Date,String,Sting)
 	getMedicarNumber
 	getissuranceCompeny
 	getPatient(Sring,Date,String,Sting)
+
 •	Appointment/reception 
 o	Time: Date
 o	Doctor: String
@@ -45,7 +48,7 @@ o	Patient: Sting
 	Method:
 •	setAppointmentTime
 •	setAppointmentDoctor
-•	setAppointment{atient
+•	setAppointmentPatient
 •	setAppointment(date,string,sting)
 •	getAppointmentTime
 •	getAppointmentDoctor
