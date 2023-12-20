@@ -11,28 +11,35 @@ import java.util.*;
  */
 
 abstract class Ticket{
+    // data member
+    public String ticketNumber;
  
-    public int ticketPrice;
- 
-    public Ticket(Date currentDate, Date ticketDate) {
-    }
+    // constructor with parameters
+    public Ticket(String theTicketNumber) {
+        // check validation of ticket number
+        if(theTicketNumber == ""){
+            Random r = new Random();
+            String allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    
+            StringBuilder aTicketNumber = new StringBuilder();
+            //generates random string of 10 characters randomly picked form allChars.
+            for(int i=0; i<=10; i++){
+                int index = r.nextInt(36);
+                aTicketNumber.append(allChars.charAt(index));
+            }
+            this.ticketNumber = aTicketNumber.toString();
+        }else{
+            this.ticketNumber = theTicketNumber;
+        } // end if block
+    }// end constructor with parameters
 
-    protected String setTicketNumber(){
-        Random r = new Random();
-        String allChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
- 
-        StringBuilder ticketNumber = new StringBuilder();
-        //generates random string of 10 characters randomly picked form allChars.
-        for(int i=0; i<=10; i++){
-            int index = r.nextInt(36);
-            ticketNumber.append(allChars.charAt(index));
-        }
-        return ticketNumber.toString();
-    }
- 
+
     @Override
-    public abstract String toString();
+    public String toString(){
+        return this.ticketNumber;
+    };
  
-    public abstract void getPrice();
+    // abstract method to get ticket price
+    public abstract double getPrice();
  
 }
