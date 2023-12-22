@@ -1,0 +1,28 @@
+Work description of Assignment 01 ( Team 4 )
+=============================================
+1. Members of Team 4:
+    6284368     Shuting Tang (leader) 
+    1320206     Evan Sharp 
+    6284160     Shawnelle Mc Nicols   
+    6278780     Bo Sun
+
+---------------------------------------------
+2. Work Deversion:
+
+Shuting:Write the StudentAdvanceTicket and Tester class, do final debugging and commit.
+
+Evan: Write and debug the Ticket class.
+
+Shawnelle: Write and debug the AdvanceTicket class.
+
+Bo: Write and debug the WalkupTicket class.
+
+---------------------------------------------
+3. Solution description:
+
+This is the second version of this Assignment.
+We do the optimization below:
+    1> Provide a new way of setting a ticket number:
+        Randomly generates a ticket number using characters and numbers, when the ticket number is not entered,
+    2> Use the LocalDate Class to create dates and calculate the days between dates.
+    3> Simplified code and completed all comments.
