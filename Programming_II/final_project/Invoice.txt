@@ -1,0 +1,22 @@
+
+          ******** Medical Clinic Invoice ******** 
+           ======================================= 
+
+
+ Patient's Information  
+ Shuting Tang 
+ 123-456-7890 
+ null 
+
+Doctor's Information 
+ Amy Smith 
+ 111-222-3333 
+ null 
+
+
+Treatment:              Description:                     Cost:  
+Check-up                Yearly Medical Evaluation        50.0                 
+
+
+            Thank you for choosing Medical Clinic! 
+Medical Clinic 123 Main St. | Montreal QC H6Z 0Y4 | Phone: 123-456-7890

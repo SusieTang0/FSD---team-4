@@ -59,26 +59,32 @@ public class Invoice {
     }
 
     public void WriteInvoice() throws IOException {
-        PrintWriter invoice = new PrintWriter("Invoice.txt");
-        invoice.println("******** Medical Clinic Invoice ******** ");
-        invoice.println("=======================================");
+        PrintWriter invoice = new PrintWriter("C:\\Users\\user\\Desktop\\FSD-11\\C3-Programming II\\Team Project\\Team Project-JavaII\\Invoice.txt");
 
-        invoice.printf(" Patient's Information %n %s %s %n %s %n %s %n",
+        invoice.println();
+        invoice.printf("%50s %n","******** Medical Clinic Invoice ********");
+        invoice.printf("%50s %n","=======================================");
+        invoice.println();
+        invoice.println();
+        invoice.printf("%s %n %s %s %n %s %n %s %n", " Patient's Information ",
                 patient.getFirstName(), patient.getLastName(),
                 patient.getPhoneNumber(),
                 patient.getAddress());
-
+                invoice.println("");
         invoice.printf("Doctor's Information %n %s %s %n %s %n %s %n",
                 doctor.getFirstName(), doctor.getLastName(),
                 doctor.getPhoneNumber(),
                 doctor.getAddress());
-
-        invoice.println("Treatment: " + treatment.getTreatmentName());
-        invoice.println("Description: " + treatment.getDescription());
-        invoice.printf("Cost: $%.2f", treatment.getCost());
-
         invoice.println();
-        invoice.println("Thank you for choosing Medical Clinic!");
+        invoice.println();
+        invoice.printf("%s", "Treatment: " );
+        invoice.printf("%26s","Description: " );
+        invoice.printf("%26s %n","Cost: ");
+        invoice.printf("%-23s %-32s %-20s ", treatment.getTreatmentName(), treatment.getDescription(), treatment.getCost());
+        invoice.println();
+        invoice.println();
+        invoice.println();
+        invoice.printf("%50s %n","Thank you for choosing Medical Clinic!");
         invoice.println("Medical Clinic 123 Main St. | Montreal QC H6Z 0Y4 | Phone: 123-456-7890");
         invoice.close();
     }
